@@ -10,7 +10,7 @@ T add(T a, T b){
 int main(){
 
     std::cout << "C++ 20" << std::endl;
-    std::cout << "Sum: " << add(3, 5) << std::endl;
+    std::cout << "Sum: " << add(9, 5) << std::endl;
 
     return 0;
 
