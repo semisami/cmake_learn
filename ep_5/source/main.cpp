@@ -7,7 +7,7 @@ int main(){
 
     
    delete p_animal;
-   std::cout << "-------------run-------------" << std::endl;
+   std::cout << "------------- run 2 -------------" << std::endl;
   
     return 0;
 }
