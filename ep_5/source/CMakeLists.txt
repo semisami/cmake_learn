@@ -16,10 +16,12 @@ add_library(feline STATIC src/feline.cpp)
 target_include_directories(feline PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_compile_features(feline PUBLIC cxx_std_20)
 
+add_library(dog STATIC dog/src/dog.cpp)
+target_include_directories(dog PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dog/include)
 
-
-add_executable(HelloAppBinary   main.cpp src/dog.cpp src/animal.cpp)
+add_executable(HelloAppBinary main.cpp src/animal.cpp)
 
 target_compile_features(HelloAppBinary PRIVATE cxx_std_20)
 target_include_directories(HelloAppBinary PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(HelloAppBinary PUBLIC feline)
+target_link_libraries(HelloAppBinary PUBLIC feline dog)
+target_link_libraries(dog PUBLIC feline)
